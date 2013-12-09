@@ -1,4 +1,4 @@
-package main
+package walkwrap
 
 import (
 	"github.com/lxn/walk"
