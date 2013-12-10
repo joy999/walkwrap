@@ -11,8 +11,9 @@ type Button struct {
 func NewButton(parent walk.Container, text string, width, height, x, y int) *Button {
 	b := new(Button)
 	b.PushButton, _ = walk.NewPushButton(parent)
-	b.SetWidth(width)
-	b.SetHeight(height)
+	size := walk.Size{width, height}
+	b.SetSize(size)
+	b.SetMinMaxSize(size, size)
 	b.SetY(y)
 	b.SetX(x)
 	b.SetText(text)
